@@ -37,3 +37,11 @@ class PaperBook(Book):
         weight_type = "kg"
         return f"- Weight of book: {self.weight}{weight_type}"
 #=========================================================
+#_Task_4
+class BorrowAble(abc.ABC):
+    @abc.abstractmethod
+    #_Abstract method-1
+    def borrowBook(self): pass
+    #_Abstract method-2
+    def returnBook(self): pass
+#=========================================================
