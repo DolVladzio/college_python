@@ -27,3 +27,13 @@ class EBook(Book):
         size_type = "mb"
         return f"- Size of file: {self.filesize}{size_type}"
 #=========================================================
+#_Task_3
+class PaperBook(Book):
+    #_Constructor
+    def __init__(self, weight):
+        self.weight = weight
+    #_Method-1
+    def paperBook(self):
+        weight_type = "kg"
+        return f"- Weight of book: {self.weight}{weight_type}"
+#=========================================================
