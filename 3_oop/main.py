@@ -81,3 +81,31 @@ class Library(BorrowAble):
         numberOfBook = self.books_list[(random.randint(1, len(self.books_list))) - 1]
         return f"- The book '{numberOfBook}' has already returned"
 #=========================================================
+#_Task_6
+class Member():
+    #_List of members
+    members_list = [
+        "Bernard Arnault",
+        "Elon Musk",
+        "Larry Ellison",
+        "Mark Zuckerberg",
+        "Bill Gates"
+    ]
+    #_Constructor-1
+    def __init__(self, nameOfMember):
+        self.nameOfMember = nameOfMember
+    #_Method-1
+    def addMember(self): return f"- The member '{self.nameOfMember}' has just added"
+    #_Destructor-2
+    def __del__(self): return f"- The member '{self.nameOfMember}' has just removed. Error 12596: 'You don't have a permission'\n"
+    #_Method-2(Displaying the random member from list)
+    def registerMember(self):
+        #_Choosing a random number of member
+        numberOfMember = self.members_list[(random.randint(1, len(self.members_list))) - 1]
+        return f"- The member '{numberOfMember}' has already registered to library"
+    #_Method-3(Displaying the random member from list)
+    def cancelMember(self):
+        #_Choosing a random number of member
+        numberOfMember = self.members_list[(random.randint(1, len(self.members_list))) - 1]
+        return f"- The member '{numberOfMember}' has already removed from library"
+#=========================================================
