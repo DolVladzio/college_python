@@ -17,3 +17,13 @@ class Book:
     def yearOfBook(self):
         return f"- Year of publication: {self.year}"
 #=========================================================
+#_Task_2
+class EBook(Book):
+    #_Constructor
+    def __init__(self, filesize):
+        self.filesize = filesize
+    #_Method-1
+    def getFileSize(self):
+        size_type = "mb"
+        return f"- Size of file: {self.filesize}{size_type}"
+#=========================================================
