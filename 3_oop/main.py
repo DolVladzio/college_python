@@ -109,3 +109,33 @@ class Member():
         numberOfMember = self.members_list[(random.randint(1, len(self.members_list))) - 1]
         return f"- The member '{numberOfMember}' has already removed from library"
 #=========================================================
+#_Task_9(Output)
+book_object = Book("Listen me", "Tess Gerritsen", 2022)
+ebook_object = EBook(1024)
+paper_book_object = PaperBook(1.5)
+library_object = Library("Just book")
+member_object = Member("John Doe")
+#_Book=========================================================
+print(book_object.nameOfBook())
+print(book_object.authorOfBook())
+print(book_object.yearOfBook())
+endLine()
+#_EBook===================================================
+print(ebook_object.sizeOfEbook())
+endLine()
+#_Paper===================================================
+print(paper_book_object.weightOfBook())
+endLine()
+#_Library=================================================
+print(library_object.addBook())
+print(library_object.__del__())
+print(library_object.borrowBook())
+print(library_object.returnBook())
+endLine()
+#_Member==================================================
+print(member_object.addMember())
+print(member_object.__del__())
+print(member_object.registerMember())
+print(member_object.cancelMember())
+endLine()
+#=========================================================
