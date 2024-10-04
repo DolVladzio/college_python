@@ -1,5 +1,10 @@
 #_OOP
 #=========================================================
+import abc
+import random
+#=========================================================
+def endLine():
+    print()
 #_Task_1
 class Book:
     #_Constructor
@@ -15,7 +20,7 @@ class Book:
         return f"- Author of book: {self.author}"
     #_Method-3
     def yearOfBook(self):
-        return f"- Year of publication: {self.year}"
+        return f"- Year of publication: {self.year}"   
 #=========================================================
 #_Task_2
 class EBook(Book):
@@ -23,7 +28,7 @@ class EBook(Book):
     def __init__(self, filesize):
         self.filesize = filesize
     #_Method-1
-    def getFileSize(self):
+    def sizeOfEbook(self):
         size_type = "mb"
         return f"- Size of file: {self.filesize}{size_type}"
 #=========================================================
@@ -33,7 +38,7 @@ class PaperBook(Book):
     def __init__(self, weight):
         self.weight = weight
     #_Method-1
-    def paperBook(self):
+    def weightOfBook(self):
         weight_type = "kg"
         return f"- Weight of book: {self.weight}{weight_type}"
 #=========================================================
@@ -69,17 +74,17 @@ class Library(BorrowAble):
     #_Method-1
     def addBook(self): return f"- The book '{self.nameOfBook}' has just added"
     #_Destructor-2
-    def __del__(self): return f"- The book '{self.nameOfBook}' has just removed\n- Error 12596: 'You don't have a permission'\n"
+    def __del__(self): return f"- The book '{self.nameOfBook}' has just removed. Error 12596: 'You don't have a permission'\n"
     #_Method-2(Displaying the random book from 'library')
-    def borrowBook(self):
+    def borrowBook(self): 
         #_Choosing a random number of book
         numberOfBook = self.books_list[(random.randint(1, len(self.books_list))) - 1]
         return f"- The book '{numberOfBook}' has already borrowed"
     #_Method-3(Displaying the random book from 'library')
-    def returnBook(self)
+    def returnBook(self): 
         #_Choosing a random number of book
         numberOfBook = self.books_list[(random.randint(1, len(self.books_list))) - 1]
-        return f"- The book '{numberOfBook}' has already returned"
+        return f"- The book '{numberOfBook}' has already returned" 
 #=========================================================
 #_Task_6
 class Member():
@@ -99,15 +104,15 @@ class Member():
     #_Destructor-2
     def __del__(self): return f"- The member '{self.nameOfMember}' has just removed. Error 12596: 'You don't have a permission'\n"
     #_Method-2(Displaying the random member from list)
-    def registerMember(self):
+    def registerMember(self): 
         #_Choosing a random number of member
         numberOfMember = self.members_list[(random.randint(1, len(self.members_list))) - 1]
         return f"- The member '{numberOfMember}' has already registered to library"
     #_Method-3(Displaying the random member from list)
-    def cancelMember(self):
+    def cancelMember(self): 
         #_Choosing a random number of member
         numberOfMember = self.members_list[(random.randint(1, len(self.members_list))) - 1]
-        return f"- The member '{numberOfMember}' has already removed from library"
+        return f"- The member '{numberOfMember}' has already removed from library" 
 #=========================================================
 #_Task_9(Output)
 book_object = Book("Listen me", "Tess Gerritsen", 2022)
