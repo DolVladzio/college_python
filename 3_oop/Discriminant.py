@@ -65,9 +65,10 @@ class Discriminant:
             
                 return "--------------------------------"
         except:
-            return "- Result was't calculated(Error: Incorrect input)"
+            print(f"- Result was't calculated(Error: a can't equal 0)")
+            return "--------------------------------" 
 #_Objects_===============================
-first_object = Discriminant(5, 1, 4, 0)
+first_object = Discriminant(0, 1, 4, 0)
 #_Result_================================
 print(first_object.CalculateDiscriminant())
 print(first_object.DiscriminantResult())
